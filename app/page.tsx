@@ -1,91 +1,105 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import Link from 'next/link';
+import Image from 'next/image';
 
-const inter = Inter({ subsets: ['latin'] })
+import {
+  ArrowIcon,
+  GitHubIcon,
+  TwitterIcon,
+  ViewsIcon,
+} from '../components/icons';
+import avatar from '../public/avatar.jpg';
 
-export default function Home() {
+export const revalidate = 60;
+
+const about = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      Hey, I&apos;m a graduate student in the School of Engineering and Applied Sciences at the University at Buffalo, New York. 
+      I&apos;m a developer who loves to build scalable web applications. 
+      When I&apos;m not coding, I&apos;m probably playing video games or football. 
+      I also love to travel and explore new places.
+    </>
+  );
+};
 
-      <div className={styles.center}>
+const bio = () => {
+  return (
+    <>
+      I am seeking full-time work opportunities for after my graduation in 2023. Specifically, I am looking for roles within software development and endineering, with a preference to work in natural language processing.
+      <br/><br/>
+      Previously, I worked as a Software Engineer at Madras Global, analyzing, designing, developing, and integrating frontend & backend applications.
+    </>
+  );
+};
+
+export default async function HomePage() {
+  return (
+    <section>
+      <h1 className="font-bold text-3xl font-serif">Jashaul Diwakar</h1>
+      <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
+        {about()}
+      </p>
+      <div className="flex items-start md:items-center my-8 flex-col md:flex-row">
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          alt="Jashaul Diwakar"
+          className="rounded-full"
+          src={avatar}
+          placeholder="blur"
+          width={100}
           priority
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+        <div className="mt-8 md:mt-0 ml-0 md:ml-6 space-y-2 text-neutral-500 dark:text-neutral-400">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://twitter.com/leeerob"
+            className="flex items-center gap-2"
+          >
+            <TwitterIcon />
+            {`tweets all time`}
+          </a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/Jashaul"
+            className="flex items-center gap-2"
+          >
+            <GitHubIcon />
+            {`GitHub`}
+          </a>
+          <Link href="/about" className="flex items-center">
+            <ViewsIcon />
+            {`blog views all time`}
+          </Link>
         </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
+        {bio()}
+      </p>
+      <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
+        <li>
+          <a
+            className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://twitter.com/leeerob"
+          >
+            <ArrowIcon />
+            <p className="h-7">follow me on twitter</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://leerob.substack.com"
+          >
+            <ArrowIcon />
+            <p className="h-7">get email updates</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  );
 }
