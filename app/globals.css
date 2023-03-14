@@ -59,7 +59,17 @@ html {
 .prose > :first-child {
   /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
-  margin-bottom: 1.25em !important;
+  margin-bottom: 0em !important;
+}
+
+.prose h2 {
+  /* Override removing top margin, causing layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 0em !important;
+}
+
+.prose ul {
+  line-height: 1.5;
 }
 
 code[class*='language-'],
