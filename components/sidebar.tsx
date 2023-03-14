@@ -21,18 +21,24 @@ const navItems: tnavItems = {
     y: 0,
     w: '64px',
   },
-  '/about': {
-    name: 'about',
+  // '/about': {
+  //   name: 'about',
+  //   x: 64,
+  //   y: 35,
+  //   w: '65px',
+  // },
+  '/experience': {
+    name: 'experience',
     x: 64,
     y: 35,
-    w: '65px',
+    w: '103px',
+  },
+  '/projects': {
+    name: 'projects',
+    x: 127,
+    y: 69,
+    w: '83px',
   }
-  // '/blog': {
-  //   name: 'blog',
-  //   x: 127,
-  //   y: 69,
-  //   w: '56px',
-  // },
 };
 
 function Logo() {

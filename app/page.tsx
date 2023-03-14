@@ -4,7 +4,7 @@ import Image from 'next/image';
 import {
   ArrowIcon,
   GitHubIcon,
-  TwitterIcon,
+  LinkedInIcon,
   ViewsIcon,
 } from '../components/icons';
 import avatar from '../public/avatar.jpg';
@@ -25,9 +25,10 @@ const about = () => {
 const bio = () => {
   return (
     <>
-      I am seeking full-time work opportunities for after my graduation in 2023. Specifically, I am looking for roles within software development and endineering, with a preference to work in natural language processing.
-      <br/><br/>
       Previously, I worked as a Software Engineer at Madras Global, analyzing, designing, developing, and integrating frontend & backend applications.
+      <br/><br/>
+      I&apos;m seeking full-time work opportunities for after my graduation in 2023. Specifically, 
+      I&apos;m looking for roles within software development and engineering, with a preference to work on automation.
     </>
   );
 };
@@ -52,11 +53,11 @@ export default async function HomePage() {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href="https://linkedin.com/in/jashaul-d"
             className="flex items-center gap-2"
           >
-            <TwitterIcon />
-            {`tweets all time`}
+            <LinkedInIcon />
+            {`Follow me on LinkedIn`}
           </a>
           <a
             rel="noopener noreferrer"
@@ -65,11 +66,12 @@ export default async function HomePage() {
             className="flex items-center gap-2"
           >
             <GitHubIcon />
-            {`GitHub`}
+            {`Check out my Github`}
           </a>
           <Link href="/about" className="flex items-center">
             <ViewsIcon />
-            {`blog views all time`}
+            {/* TODO: link resume */}
+            {`Resume`}
           </Link>
         </div>
       </div>
@@ -82,13 +84,13 @@ export default async function HomePage() {
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://twitter.com/leeerob"
+            href="mailto: djashaul@gmail.com"
           >
             <ArrowIcon />
-            <p className="h-7">follow me on twitter</p>
+            <p className="h-7">Get in touch with me</p>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
@@ -98,7 +100,7 @@ export default async function HomePage() {
             <ArrowIcon />
             <p className="h-7">get email updates</p>
           </a>
-        </li>
+        </li> */}
       </ul>
     </section>
   );

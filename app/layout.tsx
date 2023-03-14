@@ -10,7 +10,7 @@ const kaisei = localFont({
   display: 'swap',
 });
 
-// TODO: change meta
+// TODO: change meta - url
 export const metadata = {
   title: {
     default: 'Jashaul Diwakar',
