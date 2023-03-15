@@ -49,7 +49,7 @@ export function GitHubIcon() {
 export function ViewsIcon() {
   return (
     <svg
-      className="mr-2"
+      // className="mr-2"
       width="20"
       height="20"
       viewBox="0 0 24 24"

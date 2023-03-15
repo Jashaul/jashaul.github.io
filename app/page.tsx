@@ -68,11 +68,15 @@ export default async function HomePage() {
             <GitHubIcon />
             {`Check out my Github`}
           </a>
-          <Link href="/about" className="flex items-center">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="res/Jashaul_Diwakar_resume.pdf"
+            className="flex items-center gap-2"
+          >
             <ViewsIcon />
-            {/* TODO: link resume */}
             {`Resume`}
-          </Link>
+          </a>
         </div>
       </div>
       <p className="my-5 max-w-[600px] text-neutral-800 dark:text-neutral-200">
@@ -90,17 +94,6 @@ export default async function HomePage() {
             <p className="h-7">Get in touch with me</p>
           </a>
         </li>
-        {/* <li>
-          <a
-            className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://leerob.substack.com"
-          >
-            <ArrowIcon />
-            <p className="h-7">get email updates</p>
-          </a>
-        </li> */}
       </ul>
     </section>
   );

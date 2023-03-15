@@ -35,7 +35,7 @@ const navItems: tnavItems = {
   },
   '/projects': {
     name: 'projects',
-    x: 127,
+    x: 168,
     y: 69,
     w: '83px',
   }

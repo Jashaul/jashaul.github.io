@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: 'Jashaul Diwakar',
     description: 'Developer, writer, and creator.',
-    // url: 'https://leerob.io',
+    url: 'https://jashaul.github.io',
     siteName: 'Jashaul Diwakar',
     images: [
       {

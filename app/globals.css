@@ -72,6 +72,11 @@ html {
   line-height: 1.5;
 }
 
+.prose p {
+  line-height: 1.5;
+  /* text-align: justify; */
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
   @apply text-neutral-50;
