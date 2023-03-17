@@ -2,6 +2,8 @@ import './globals.css';
 import clsx from 'clsx';
 import localFont from 'next/font/local';
 import Sidebar from '../components/sidebar';
+import AnalyticsWrapper from '../components/analytics';
+import type { Metadata } from 'next';
 
 const kaisei = localFont({
   src: '../public/fonts/kaisei-tokumin-latin-700-normal.woff2',
@@ -10,21 +12,20 @@ const kaisei = localFont({
   display: 'swap',
 });
 
-// TODO: change meta - url
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Jashaul Diwakar',
     template: '%s | Jashaul Diwakar',
   },
-  description: 'Developer, writer, and creator.',
+  description: 'Developer',
   openGraph: {
     title: 'Jashaul Diwakar',
-    description: 'Developer, writer, and creator.',
-    url: 'https://jashaul.github.io',
+    description: 'Developer',
+    url: 'https://jashaul.vercel.app',
     siteName: 'Jashaul Diwakar',
     images: [
       {
-        url: '../public/og.jpg',
+        url: 'https://jashaul.vercel.app/og.jpg',
         width: 1920,
         height: 1080,
       },
@@ -46,6 +47,10 @@ export const metadata = {
   icons: {
     shortcut: '/favicon.ico',
   },
+  verification: {
+    google: 'google',
+    yandex: 'yandex',
+  },
 }
 
 export default function RootLayout({
@@ -65,6 +70,7 @@ export default function RootLayout({
         <Sidebar />
         <main className="flex-auto min-w-0 mt-6 md:mt-0 flex flex-col px-2 md:px-0">
           {children}
+          <AnalyticsWrapper />
         </main>
       </body>
     </html>

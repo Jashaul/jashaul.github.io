@@ -1,5 +1,5 @@
 {
-  "name": "jd.io",
+  "name": "jd.github.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,13 +11,17 @@
   },
   "dependencies": {
     "@next/font": "13.1.7-canary.5",
+    "@vercel/analytics": "^0.1.8",
+    "@vercel/edge-config": "^0.1.1",
+    "@vercel/og": "^0.0.27",
+    "clsx": "^1.2.1",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "clsx": "^1.2.1",
-    "framer-motion": "^8.5.4"
+    "framer-motion": "^8.5.4",
+    "rehype-pretty-code": "^0.9.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",

@@ -1,28 +1,19 @@
+const { get } = require('@vercel/edge-config');
+
 /** @type {import('next').NextConfig} */
-// const isGithubActions = process.env.GITHUB_ACTIONS || false
-
-// let assetPrefix = ''
-// let basePath = '/'
-
-// if (isGithubActions) {
-//   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
-
-//   assetPrefix = `/${repo}/`
-//   basePath = `/${repo}`
-// }
-
 const nextConfig = {
-  formats: ['image/avif', 'image/webp'],
-  // Twitter Profile Picture
-  remotePatterns: [
-    {
-      protocol: 'https',
-      hostname: 'pbs.twimg.com',
-      pathname: '/**',
-    },
-  ],
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
   experimental: {
     appDir: true,
+  },
+  redirects() {
+    try {
+      return get('redirects');
+    } catch {
+      return [];
+    }
   },
   headers() {
     return [
